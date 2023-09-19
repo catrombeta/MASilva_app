@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="./js/jquery/jquery-3.6.1.min.js"></script>
+        <script src="./js/touchSwipe/jquery.touchSwipe.min.js"></script>
+        <script src="./js/jcarousel/jquery.jcarousel.min.js"></script>
+        <title>MA App</title>
+    </head>
+    <body>
+        <header id="main_header">
+            <img src="img/arrow_left.svg" alt="Arrow left" id="back_main_page">
+            <p id="header_text"></p>
+            <img src="img/logo_header.png" alt="Logo Header">
+        </header>
+        <section id="main_page"> 
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo_main_sbg.png" alt="Logo">
+                </div>
+                <div class="buttons">
+                    <div class="button_main_page" id="btn_video">
+                        <p id="btn_text_video" class="button_text_main_page"></p>
+                    </div>
+                    <div class="button_main_page" id="btn_durability">
+                        <p id="btn_text_durability" class="button_text_main_page"></p>
+                    </div>
+                    <div class="button_main_page" id="btn_family">
+                        <p id="btn_text_family" class="button_text_main_page"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="institutional_video">
+            <video controls>
+                <source src="img/institutional_film.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section id="information_durability">
+            <img src="./img/durability_page.png" alt="">
+        </section>
+        <section id="catalog_family">
+            <div class="button_catalog">
+                <img src="img/VIVA1.png" alt="Viva 1" class="img_button_catalog">
+                <p id="btn_text_viva1" class="button_text_catalog">
+                    VIVA1
+                </p>
+            </div>
+            <div class="button_catalog">
+                <img src="img/VIVA2.png" alt="Viva 2" class="img_button_catalog">
+                <p id="btn_text_viva2" class="button_text_catalog">
+                    VIVA2
+                </p>
+            </div>
+            <div class="button_catalog">
+                <img src="img/VIVA_NEO_PRESTIGE.png" alt="Viva Neo Prestige" class="img_button_catalog">
+                <p id="btn_text_viva_neo_prestige" class="button_text_catalog">
+                    VIVA NEO PRESTIGE 
+                </p>
+            </div>
+            <div class="button_catalog">
+                <img src="img/VIVA_NEO_PLUS.png" alt="Viva Neo Plus" class="img_button_catalog">
+                <p id="btn_text_viva_neo_plus" class="button_text_catalog">
+                    VIVA NEO PLUS
+                </p>
+            </div>
+            <div class="button_catalog">
+                <img src="img/VIVA_MILLESIME.png" alt="Viva Millesime" class="img_button_catalog">
+                <p id="btn_text_viva_millesime" class="button_text_catalog">
+                    VIVA2 MILLESIME 
+                </p>
+            </div>
+        </section>
+        <section id="carousel_catalog">
+            <div class="content_carousel">
+                <div class="stage">
+                    <div class="carousel carousel-stage">
+                        <ul>
+                            <li><img src="./img/VIVA1.png" alt=""></li>
+                            <li><img src="./img/VIVA2.png" alt=""></li>
+                            <li><img src="./img/VIVA_NEO_PRESTIGE.png" alt=""></li>
+                            <li><img src="./img/VIVA_NEO_PLUS.png" alt=""></li>
+                            <li><img src="./img/VIVA_MILLESIME.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="#" class="prev prev-stage"><span>&lsaquo;</span></a>
+                    <a href="#" class="next next-stage"><span>&rsaquo;</span></a> -->
+                </div>
+                <div>
+                    <p class="jcarousel-pagination"></p>
+                </div>
+
+                <div class="navigation">
+                    <div class="carousel carousel-navigation">
+                        <ul>
+                            <li><img src="./img/infos_rolhas/VIVA1.png" alt=""></li>
+                            <li><img src="./img/infos_rolhas/VIVA2.png" alt=""></li>
+                            <li><img src="./img/infos_rolhas/VIVA_NEO_PRESTIGE.png" alt=""></li>
+                            <li><img src="./img/infos_rolhas/VIVA_NEO_PLUS.png" alt=""></li>
+                            <li><img src="./img/infos_rolhas/VIVA2_MILLESIME.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
