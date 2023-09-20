@@ -1,0 +1,2 @@
+www/img/video.mp4 filter=lfs diff=lfs merge=lfs -text
+www/img/medium_quality_video.mp4 filter=lfs diff=lfs merge=lfs -text
