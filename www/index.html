@@ -2,12 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <!--
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -15,6 +9,7 @@
         <meta name="color-scheme" content="light dark">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="css/animate_framework/animate.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css">
         <script src="./js/jquery/jquery-3.6.1.min.js"></script>
@@ -24,6 +19,9 @@
     </head>
     <body>
         <section id="main_page"> 
+            <video loop muted autoplay>
+                <source src="img/bg_mainpage.mp4" type="video/mp4">
+            </video>
             <div class="container">
                 <div class="logo">
                     <img src="img/logo_main_sbg.png" alt="Logo">
@@ -48,7 +46,7 @@
                 <img src="img/logo_header.png" alt="Logo Header">
             </div>
             <video id="video_institutional" controls>
-                <source src="img/medium_quality_video.mp4" type="video/mp4">
+                <source src="img/video.mp4" type="video/mp4">
             </video>
         </section>
         <section id="information_durability">
@@ -57,7 +55,10 @@
                     <p id="title_page_durability"></p>
                     <img src="img/logo_header.png" alt="Logo Header">
             </nav>
-            <div class="container_img_durability">
+            <div class="container_img_durability" id="scroll_container_durability">
+                <!-- <div class="scroll-to-top" id="scroll-to-top-section-durability">
+                    <img src="./img/icons8-collapse-arrow-100.png" alt="" class="scroll-to-top-button">
+                </div> -->
                 <img src="./img/durability_page.png" alt="">
             </div>
         </section>
@@ -123,11 +124,21 @@
                 <div class="navigation">
                     <div class="carousel carousel-navigation">
                         <ul>
-                            <li><img src="./img/infos_rolhas/VIVA1.png" alt=""></li>
-                            <li><img src="./img/infos_rolhas/VIVA2.png" alt=""></li>
-                            <li><img src="./img/infos_rolhas/VIVA_NEO_PRESTIGE.png" alt=""></li>
-                            <li><img src="./img/infos_rolhas/VIVA_NEO_PLUS.png" alt=""></li>
-                            <li><img src="./img/infos_rolhas/VIVA2_MILLESIME.png" alt=""></li>
+                            <li id="scroll_container_navigation_1" class="scrollable-item">
+                                <img src="./img/infos_rolhas/VIVA1.png" alt="">
+                            </li>
+                            <li id="scroll_container_navigation_2" class="scrollable-item">
+                                <img src="./img/infos_rolhas/VIVA2.png" alt="">
+                            </li>
+                            <li id="scroll_container_navigation_3" class="scrollable-item">
+                                <img src="./img/infos_rolhas/VIVA_NEO_PRESTIGE.png" alt="">
+                            </li>
+                            <li id="scroll_container_navigation_4" class="scrollable-item">
+                                <img src="./img/infos_rolhas/VIVA_NEO_PLUS.png" alt="">
+                            </li>
+                            <li id="scroll_container_navigation_5" class="scrollable-item">
+                                <img src="./img/infos_rolhas/VIVA2_MILLESIME.png" alt="">
+                            </li>
                         </ul>
                     </div>
                 </div>
